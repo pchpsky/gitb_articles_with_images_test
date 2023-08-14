@@ -4,3 +4,6 @@
     img src="#{image['src']}" alt="#{image['alt'] || posting.title}" data-image="#{image['data-image']}"
 .teaser id="teaser_#{posting.id}"
   => posting_snippet(posting) # uses HTML_Truncator gem and calls .html_safe on the output
+
+-# I'd rename posting_snippet to display_posting_snippet. Don't forget to call `.snippet`
+-# Also, now you can just use display_posting_snippet(snippet) instead of this partial
